@@ -1,10 +1,11 @@
 <script setup>
-import Header from '../components/Header.vue'
+import Header from '../components/Header.vue';
+import ItemOverview from '../components/ItemOverview.vue';
 </script>
 
 <template>
     <Header />
-   <p>Test</p>
+   <ItemOverview />
 </template>
 
 <style scoped>

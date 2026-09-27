@@ -6,5 +6,4 @@ import UserInfo from '../components/UserInfo.vue';
 <template>
     <Header />
     <UserInfo />
-    <p>UserStats</p>
 </template>
