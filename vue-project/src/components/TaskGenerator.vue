@@ -3,24 +3,14 @@ import { inject, ref, computed } from 'vue'
 
 const playerStats = inject('playerStats', { currentXP: 0 })
 
-const questPool = [
-  { id: 1, title: 'Scan the neon ruins', reward: 75, description: 'Sweep the abandoned towers and clear the power grid.' },
-  { id: 2, title: 'Deliver the encrypted shard', reward: 110, description: 'Carry the encoded data to the guild relay station.' },
-  { id: 3, title: 'Eliminate the rogue drones', reward: 140, description: 'Clear the maintenance drones from the undercity tunnel.' },
-  { id: 4, title: 'Protect the generator', reward: 160, description: 'Defend the core generator during the raid wave.' },
-  { id: 5, title: 'Recover the lost memory core', reward: 190, description: 'Retrieve the ghosted artifact from the ruined lab.' },
-  { id: 6, title: 'Clean the data vault', reward: 210, description: 'Wipe corruption from the guild archive before it spreads.' },
-  { id: 7, title: 'Escort the courier', reward: 120, description: 'Deliver the courier through hostile rooftops and alleys.' },
-  { id: 8, title: 'Defend the relay station', reward: 180, description: 'Hold the signal relay until reinforcements arrive.' },
-  { id: 9, title: 'Repair the drone bay', reward: 150, description: 'Restore the damaged drone bay before the next surge.' },
-  { id: 10, title: 'Unlock the hidden cache', reward: 220, description: 'Breach the locked cache beneath the abandoned market.' }
-]
+// Use the centralized quest pool provided by App.vue
+const quests = inject('quests', [])
 
 const activeQuests = ref([])
 const currentQuestCount = computed(() => activeQuests.value.length)
 
 function getRandomQuest() {
-  const available = questPool.filter(q => !activeQuests.value.some(a => a.id === q.id))
+  const available = quests.filter(q => !activeQuests.value.some(a => a.id === q.id))
   if (!available.length) return null
   return available[Math.floor(Math.random() * available.length)]
 }
@@ -40,14 +30,23 @@ function generateQuest() {
 
 function completeQuest(questId) {
   const quest = activeQuests.value.find(item => item.id === questId)
-  if (!quest || quest.completed) return
-
-  quest.completed = true
+  if (!quest) return
 
   const reward = Number(quest.reward || 0)
   if (playerStats) {
-    playerStats.currentXP = Number(playerStats.currentXP || 0) + reward
+  const current = Number(playerStats.currentXP || 0)
+  const nextXP = current + reward
+
+  if (nextXP >= 1000) {
+    playerStats.level = Number(playerStats.level || 1) + 1
+    playerStats.currentXP = 0
+  } else {
+    playerStats.currentXP = nextXP
   }
+  }
+
+  // Remove it immediately so it can be generated again later.
+  deleteQuest(questId)
 }
 
 function deleteQuest(questId) {

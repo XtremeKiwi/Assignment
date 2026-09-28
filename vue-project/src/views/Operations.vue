@@ -1,11 +1,14 @@
 <script setup>
 import Header from '../components/Header.vue'
+import UserInfoOperations from '../components/UserInfoOperations.vue'
 import Todo from '../components/Todo.vue'
 import TaskGenerator from '../components/TaskGenerator.vue'
 </script>
 
 <template>
   <Header />
+
+  <UserInfoOperations />
 
   <div class="operations-layout">
     <Todo />

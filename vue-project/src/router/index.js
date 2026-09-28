@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import FrontPage from '../views/FrontPage.vue'
 import Operations from '../views/Operations.vue'
 import UserStats from '../views/UserStats.vue'
+import Matrix from '../views/Matrix.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,6 +18,10 @@ const router = createRouter({
         {
       path: '/userstats',
       component: UserStats,
+    },
+            {
+      path: '/matrix',
+      component: Matrix,
     }
   ],
 })

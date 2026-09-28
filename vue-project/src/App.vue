@@ -7,7 +7,7 @@ const playerStats = reactive({
   userImage: '/Unicorn.webp',
   username: 'PrincessUnikørn',
   class: 'Couchpotato',
-  level: '12',
+  level: 12,
   currentXP: 500,
   description:
     'Princess Unikørn is not your average hacker. While most cybersecurity experts spend years mastering networking, encryption, and advanced exploit development, Princess Unikørn somehow achieves the same results through a combination of caffeine, determination, and what scientists have reluctantly classified as pure chaos.'
@@ -265,9 +265,24 @@ const chatData = reactive({
   currentUser: { name: 'You', color: '#fff07a' }
 })
 
+// Provide a centralized quest pool for TaskGenerator
+const quests = reactive([
+  { id: 1, title: 'Scan the neon ruins', reward: 75, description: 'Sweep the abandoned towers and clear the power grid.' },
+  { id: 2, title: 'Deliver the encrypted shard', reward: 110, description: 'Carry the encoded data to the guild relay station.' },
+  { id: 3, title: 'Eliminate the rogue drones', reward: 140, description: 'Clear the maintenance drones from the undercity tunnel.' },
+  { id: 4, title: 'Protect the generator', reward: 160, description: 'Defend the core generator during the raid wave.' },
+  { id: 5, title: 'Recover the lost memory core', reward: 190, description: 'Retrieve the ghosted artifact from the ruined lab.' },
+  { id: 6, title: 'Clean the data vault', reward: 210, description: 'Wipe corruption from the guild archive before it spreads.' },
+  { id: 7, title: 'Escort the courier', reward: 120, description: 'Deliver the courier through hostile rooftops and alleys.' },
+  { id: 8, title: 'Defend the relay station', reward: 180, description: 'Hold the signal relay until reinforcements arrive.' },
+  { id: 9, title: 'Repair the drone bay', reward: 150, description: 'Restore the damaged drone bay before the next surge.' },
+  { id: 10, title: 'Unlock the hidden cache', reward: 220, description: 'Breach the locked cache beneath the abandoned market.' }
+])
+
 provide('playerStats', playerStats)
 provide('items', items)
 provide('chatData', chatData)
+provide('quests', quests)
 </script>
 
 <template>
