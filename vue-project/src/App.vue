@@ -4,7 +4,7 @@ import { RouterView } from 'vue-router'
 
 // Provide player stats (reactive) to descendants
 const playerStats = reactive({
-  userImage: '/Unicorn.jpg',
+  userImage: '/Unicorn.webp',
   username: 'PrincessUnikørn',
   class: 'Couchpotato',
   level: '12',

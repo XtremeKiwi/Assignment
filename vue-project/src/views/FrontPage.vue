@@ -5,7 +5,7 @@ import ItemOverview from '../components/ItemOverview.vue';
 
 <template>
     <Header />
-   <ItemOverview />
+   <ItemOverview />   
 </template>
 
 <style scoped>
