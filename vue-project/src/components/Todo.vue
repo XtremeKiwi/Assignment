@@ -112,75 +112,109 @@ const deleteTodo = (id) => {
   todos.value = todos.value.filter(todo => todo.id !== id)
 }
 </script>
-
 <style scoped>
 .todo-container {
-  max-width: 700px;
-  margin: auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  width: 600px;
+  padding: 1.25rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .add-task {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
 }
 
 .add-task input {
   flex: 1;
-  padding: 8px;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 0.95rem;
+}
+
+.add-task input:focus,
+.task-content input:focus {
+  outline: none;
+  border-color: #7aa8ff;
+  box-shadow: 0 0 0 4px rgba(122, 168, 255, 0.08);
+}
+
+.add-task button,
+.actions button {
+  padding: 0.6rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.add-task button:hover,
+.actions button:hover {
+  transform: translateY(-1px);
 }
 
 .todo-list {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
 .todo-list li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 15px;
-  padding: 12px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  gap: 0.8rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  background: #fff;
 }
 
 .task-content {
   flex: 1;
+  min-width: 0;
+  color: #333;
 }
 
 .task-content input {
   width: 100%;
-  padding: 6px;
+  padding: 0.55rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
 }
 
-.completed span {
+.completed .task-content span {
   text-decoration: line-through;
-  color: gray;
+  color: #777;
 }
 
 .actions {
   display: flex;
-  gap: 8px;
-}
-
-button {
-  padding: 6px 12px;
-  cursor: pointer;
+  gap: 0.45rem;
+  flex-wrap: wrap;
 }
 
 .save-btn {
-  background: #3498db;
-  color: white;
-  border: none;
+  background: #2f2f2f;
+  color: #fff;
+  border-color: #2f2f2f;
 }
 
 .delete-btn {
-  background: #e74c3c;
-  color: white;
-  border: none;
+  background: #f4f4f4;
+  color: #333;
 }
 </style>
