@@ -87,8 +87,33 @@ const items = reactive([
   }
 ])
 
+// Provide a fake chat dataset (users and message pool)
+const chatData = reactive({
+  users: [
+    { name: 'Thorgal', color: '#c79c6e' },
+    { name: 'Mira', color: '#a9d6e5' },
+    { name: 'Korvax', color: '#e0a7a7' },
+    { name: 'Sable', color: '#b7d7a8' }
+  ],
+  messagesPool: [
+    "Anyone up for a dungeon run?",
+    "Need healer for Molten Core!",
+    "Selling rare drop, whisper me",
+    "Who knows the recipe for elixir of agility?",
+    "That boss mechanic was wild",
+    "LF tank for heroic quest",
+    "Congrats on the epic loot!",
+    "Meet at the inn in 10",
+    "Need help with a quest item",
+    "Nice roll!"
+  ],
+  // currentUser is the local player name shown when typing/sending
+  currentUser: { name: 'You', color: '#fff07a' }
+})
+
 provide('playerStats', playerStats)
 provide('items', items)
+provide('chatData', chatData)
 </script>
 
 <template>
