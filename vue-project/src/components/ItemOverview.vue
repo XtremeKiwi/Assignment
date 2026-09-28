@@ -117,6 +117,9 @@ function applySuggestion(s) {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.65rem;
+  /* show only 5 rows (2 columns) => 10 items visible without scrolling */
+  max-height: 560px; /* approx. 5 * 110px rows */
+  overflow-y: auto;
 }
 
 .item-card {
