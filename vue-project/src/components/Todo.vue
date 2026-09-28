@@ -66,7 +66,6 @@
 import { ref } from 'vue'
 
 const newTask = ref('')
-
 const todos = ref([
   {
     id: 1,
