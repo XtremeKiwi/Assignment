@@ -3,6 +3,8 @@ import Header from '../components/Header.vue'
 import UserInfo from '../components/UserInfo.vue'
 import UserInventory from '../components/UserInventory.vue'
 import UserFriends from '../components/UserFriends.vue'
+import Wallet from '../components/Wallet.vue'
+import FinishedTasks from '../components/FinishedTasks.vue'
 </script>
 
 <template>
@@ -11,11 +13,13 @@ import UserFriends from '../components/UserFriends.vue'
   <div class="user-stats-grid">
     <div class="left-column">
       <UserInfo />
+      <Wallet />
       <UserFriends />
     </div>
 
     <div class="right-column">
       <UserInventory />
+      <FinishedTasks />
     </div>
   </div>
 </template>

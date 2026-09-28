@@ -38,6 +38,10 @@ const xpPercent = computed(() => {
           <span class="label">CurrentXP</span>
           <strong>{{ user?.currentXP }}</strong>
         </div>
+        <div>
+          <span class="label">Eurodollars</span>
+          <strong>{{ Number(user?.eurodollar || 0) }}</strong>
+        </div>
       </div>
 
       <div class="xp-bar" role="progressbar" :aria-valuenow="user?.currentXP ?? 0" aria-valuemin="0" aria-valuemax="1000">
@@ -94,7 +98,7 @@ const xpPercent = computed(() => {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
   gap: 0.75rem;
   margin-bottom: 0.75rem;
 }

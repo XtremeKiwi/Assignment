@@ -9,6 +9,8 @@ const playerStats = reactive({
   class: 'Couchpotato',
   level: 12,
   currentXP: 500,
+  eurodollar: 0,
+  euroDollar: 60,
   description:
     'Princess Unikørn is not your average hacker. While most cybersecurity experts spend years mastering networking, encryption, and advanced exploit development, Princess Unikørn somehow achieves the same results through a combination of caffeine, determination, and what scientists have reluctantly classified as pure chaos.'
 })
@@ -279,10 +281,13 @@ const quests = reactive([
   { id: 10, title: 'Unlock the hidden cache', reward: 220, description: 'Breach the locked cache beneath the abandoned market.' }
 ])
 
+const completedTasks = reactive([])
+
 provide('playerStats', playerStats)
 provide('items', items)
 provide('chatData', chatData)
 provide('quests', quests)
+provide('completedTasks', completedTasks)
 </script>
 
 <template>

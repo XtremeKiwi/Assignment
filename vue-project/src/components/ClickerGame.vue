@@ -48,7 +48,7 @@ function handleClick() {
   <section class="clicker-game">
     <div class="clicker-header">
       <h3>Hack the Matrix</h3>
-      <span class="click-count">Clicks: {{ clicks }}</span>
+      <span class="click-count">Level: {{ playerStats?.level ?? 1 }}</span>
     </div>
 
     <div class="xp-panel">

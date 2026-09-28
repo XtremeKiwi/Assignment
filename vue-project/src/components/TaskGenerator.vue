@@ -1,10 +1,11 @@
 <script setup>
 import { inject, ref, computed } from 'vue'
 
-const playerStats = inject('playerStats', { currentXP: 0 })
+const playerStats = inject('playerStats', { currentXP: 0, eurodollar: 0 })
 
 // Use the centralized quest pool provided by App.vue
 const quests = inject('quests', [])
+const completedTasks = inject('completedTasks', [])
 
 const activeQuests = ref([])
 const currentQuestCount = computed(() => activeQuests.value.length)
@@ -34,8 +35,8 @@ function completeQuest(questId) {
 
   const reward = Number(quest.reward || 0)
   if (playerStats) {
-  const current = Number(playerStats.currentXP || 0)
-  const nextXP = current + reward
+  const currentXP = Number(playerStats.currentXP || 0)
+  const nextXP = currentXP + reward
 
   if (nextXP >= 1000) {
     playerStats.level = Number(playerStats.level || 1) + 1
@@ -43,6 +44,21 @@ function completeQuest(questId) {
   } else {
     playerStats.currentXP = nextXP
   }
+
+  const currentEuro = Number(playerStats.eurodollar || 0)
+  playerStats.eurodollar = currentEuro + Math.max(10, Math.round(reward / 10))
+  }
+
+  const taskRecord = {
+  id: quest.id,
+  title: quest.title,
+  reward: quest.reward,
+  eurodollar: Math.max(10, Math.round((quest.reward || 0) / 10)),
+  completedAt: new Date().toISOString()
+  }
+
+  if (completedTasks && !completedTasks.some(item => item.id === taskRecord.id)) {
+  completedTasks.push(taskRecord)
   }
 
   // Remove it immediately so it can be generated again later.
@@ -74,6 +90,7 @@ function deleteQuest(questId) {
 
         <div class="quest-meta">
           <span class="reward">+{{ quest.reward }} XP</span>
+          <span class="bonus">+{{ Math.max(10, Math.round((quest.reward || 0) / 10)) }} €</span>
           <div class="quest-actions">
             <button @click="completeQuest(quest.id)" :disabled="quest.completed">
               {{ quest.completed ? 'Completed' : 'Complete' }}
@@ -176,6 +193,11 @@ function deleteQuest(questId) {
 .reward {
   font-weight: 700;
   color: #2d7d46;
+}
+
+.bonus {
+  font-weight: 700;
+  color: #0d6b7f;
 }
 
 .quest-actions {
