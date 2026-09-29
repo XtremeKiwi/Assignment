@@ -20,9 +20,9 @@ const playerStats = inject('playerStats')
   width: 100%;
   max-width: 240px;
   padding: 0.8rem 1rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgba(147,255,191,0.26);
   border-radius: 12px;
-  background: #ffffff;
+  background: rgba(147,255,191,0.26);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
 }
@@ -31,7 +31,7 @@ const playerStats = inject('playerStats')
   font-size: 0.75rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #666;
+  color: #fff;
 }
 
 strong {

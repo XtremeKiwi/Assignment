@@ -39,7 +39,7 @@ function onInput(e) {
   border: 1px solid #d9d9d9;
   font-size: 0.95rem;
   box-sizing: border-box;
-  background: #fff;
+  background: rgba(147,255,191,0.26);
 }
 
 .search-input:focus {

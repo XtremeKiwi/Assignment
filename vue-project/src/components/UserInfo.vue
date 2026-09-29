@@ -114,10 +114,10 @@ function cancelEdit() {
   align-items: center;
   gap: 1.25rem;
   padding: 1.25rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--border);
   border-radius: 16px;
-  background: #f9f9f9;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: rgba(255,255,255,0.06);
+  box-shadow: none;
   box-sizing: border-box;
 }
 
@@ -130,7 +130,7 @@ function cancelEdit() {
   height: 110px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #fff;
+  border: 3px solid rgba(147,255,191,0.26);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
@@ -155,7 +155,8 @@ function cancelEdit() {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  background: #ffffff;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 0.6rem 0.7rem;
 }
@@ -164,11 +165,12 @@ function cancelEdit() {
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #666;
+  color: var(--muted);
 }
 
 strong {
   font-size: 1rem;
+  color: var(--text);
 }
 
 /* XP bar */
@@ -176,8 +178,8 @@ strong {
   position: relative;
   width: 100%;
   height: 14px;
-  background: linear-gradient(180deg, #ececec, #f6f6f6);
-  border: 1px solid #e0e0e0;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 0.9rem;
@@ -185,7 +187,7 @@ strong {
 
 .xp-fill {
   height: 100%;
-  background: linear-gradient(90deg, #ffd86b, #f0c14b);
+  background: var(--accent);
   transition: width 0.25s ease;
 }
 
@@ -195,7 +197,7 @@ strong {
   top: 50%;
   transform: translateY(-50%);
   font-size: 0.75rem;
-  color: #333;
+  color: #999;
   font-weight: 600;
 }
 
@@ -244,7 +246,7 @@ strong {
 
 .description {
   margin: 0;
-  color: #444;
+  color: #999;
   line-height: 1.5;
 }
 
@@ -253,7 +255,7 @@ strong {
   padding: 0.5rem 0.6rem;
   border-radius: 8px;
   border: 1px solid #d9d9d9;
-  background: #fff;
+  background: rgba(255,255,255,0.06);
 }
 
 .edit-btn,
@@ -262,7 +264,7 @@ strong {
   padding: 0.45rem 0.7rem;
   border-radius: 8px;
   border: 1px solid #d9d9d9;
-  background: #fff;
+  background: rgba(255,255,255,0.06);
   cursor: pointer;
 }
 
@@ -273,7 +275,7 @@ strong {
 }
 
 .cancel-btn {
-  background: #f8f8f8;
+  background: rgba(255,255,255,0.06);
 }
 </style>
 

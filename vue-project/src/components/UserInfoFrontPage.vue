@@ -56,9 +56,9 @@ function goToUserStats() {
   align-items: center;
   gap: 1.25rem;
   padding: 1.25rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgba(147,255,191,0.26);
   border-radius: 16px;
-  background: #f9f9f9;
+  background: rgba(255,255,255,0.06);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
   cursor: pointer;
@@ -84,7 +84,7 @@ function goToUserStats() {
   height: 110px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #fff;
+  border: 3px solid rgba(147,255,191,0.26);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
@@ -108,9 +108,10 @@ function goToUserStats() {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  background: #ffffff;
+  background: rgba(255,255,255,0.06);
   border-radius: 10px;
   padding: 0.6rem 0.7rem;
+
 }
 
 .label {
@@ -122,5 +123,6 @@ function goToUserStats() {
 
 strong {
   font-size: 1rem;
+    color: #fff;
 }
 </style>

@@ -80,9 +80,9 @@ function applySuggestion(s) {
 #itemOverview {
   width: 600px;
   padding: 1rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgba(147,255,191,0.26);
   border-radius: 16px;
-  background: #f9f9f9;
+  background: rgba(255,255,255,0.06);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
 }
@@ -103,7 +103,7 @@ function applySuggestion(s) {
   padding: 0.45rem 0.6rem;
   border-radius: 8px;
   cursor: pointer;
-  color: #333;
+  color: #999;
 }
 
 .suggestion-item:hover {
@@ -126,16 +126,16 @@ function applySuggestion(s) {
   display: flex;
   flex-direction: column;
   gap: 0.45rem;
-  background: #fff;
+  background: rgba(255,255,255,0.06);
   padding: 0.7rem;
   border-radius: 12px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid (255,255,255,0.06);
   transition: all 0.18s ease;
 }
 
 .item-card.suggested {
   border-color: #f0bb3a;
-  background: linear-gradient(180deg, #fffaf0 0%, #fffef7 100%);
+  background: rgba(255,255,255,0.02);
   box-shadow: 0 6px 18px rgba(240, 187, 58, 0.08);
   transform: translateY(-2px);
 }
@@ -151,7 +151,7 @@ function applySuggestion(s) {
 
 .item-desc {
   margin: 0;
-  color: #555;
+  color: #999;
   font-size: 0.82rem;
   line-height: 1.3;
   max-height: 2.6rem;
@@ -166,10 +166,10 @@ function applySuggestion(s) {
 }
 
 .meta-row {
-  background: #fafafa;
+  background: rgba(255,255,255,0.06);
   padding: 0.33rem 0.4rem;
   border-radius: 8px;
-  border: 1px solid #f0f0f0;
+  border: 1px solid (255,255,255,0.06);
   text-align: center;
 }
 
@@ -183,7 +183,7 @@ function applySuggestion(s) {
 
 .empty {
   margin-top: 0.75rem;
-  color: #666;
+  color: #fff;
   font-style: italic;
 }
 </style>

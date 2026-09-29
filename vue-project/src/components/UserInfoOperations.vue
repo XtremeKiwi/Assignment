@@ -66,9 +66,9 @@ const xpPercent = computed(() => {
   align-items: center;
   gap: 1.25rem;
   padding: 1.25rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgba(147,255,191,0.26);
   border-radius: 16px;
-  background: #f9f9f9;
+  background: rgba(255,255,255,0.06);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
 }
@@ -82,7 +82,7 @@ const xpPercent = computed(() => {
   height: 110px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #fff;
+  border: 3px solid (255,255,255,0.06);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
@@ -107,7 +107,7 @@ const xpPercent = computed(() => {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  background: #ffffff;
+  background: rgba(255,255,255,0.06);
   border-radius: 10px;
   padding: 0.6rem 0.7rem;
 }
@@ -127,8 +127,8 @@ strong {
   position: relative;
   width: 100%;
   height: 14px;
-  background: linear-gradient(180deg, #ececec, #f6f6f6);
-  border: 1px solid #e0e0e0;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
   border-radius: 8px;
   overflow: hidden;
   margin-top: 0.25rem;
@@ -136,7 +136,7 @@ strong {
 
 .xp-fill {
   height: 100%;
-  background: linear-gradient(90deg, #ffd86b, #f0c14b);
+  background: var(--accent);
   transition: width 0.25s ease;
 }
 

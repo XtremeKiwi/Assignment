@@ -110,7 +110,7 @@ onBeforeUnmount(() => {
       <input
         v-model="inputValue"
         @keydown.enter.prevent="sendLocalMessage"
-        placeholder="Type a message and press Enter"
+        placeholder="Type here..."
         aria-label="Chat input"
       />
       <button @click="sendLocalMessage">Send</button>
@@ -123,9 +123,9 @@ onBeforeUnmount(() => {
   width: 320px;
   height: 420px;
   padding: 1rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgba(147,255,191,0.26);
   border-radius: 16px;
-  background: #999;
+  background: rgba(255,255,255,0.06);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
   display: flex;
@@ -138,7 +138,7 @@ onBeforeUnmount(() => {
   padding: 0.2rem 0.2rem 0.6rem 0.2rem;
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 0.6rem;
-  color: #222;
+  color: #999;
 }
 
 .chat-window {
@@ -153,7 +153,7 @@ onBeforeUnmount(() => {
 }
 
 .msg {
-  background: #888;
+  background: rgba(255,255,255,0.06);
   padding: 0.45rem 0.6rem;
   border-radius: 10px;
   border: 1px solid #e6e6e6;
@@ -203,8 +203,8 @@ onBeforeUnmount(() => {
   padding: 0.45rem 0.6rem;
   border-radius: 10px;
   border: 1px solid #d9d9d9;
-  background: #fff;
-  color: #222;
+  background: rgba(147,255,191,0.26);
+  color: #fff;
   box-sizing: border-box;
 }
 

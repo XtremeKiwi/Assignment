@@ -53,7 +53,7 @@ function handleClick() {
   padding: 1.25rem;
   border: 1px solid #d9d9d9;
   border-radius: 16px;
-  background: #f9f9f9;
+  background: rgba(147,255,191,0.26);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
 }
@@ -73,7 +73,7 @@ function handleClick() {
 
 .click-count {
   font-weight: 700;
-  color: #333;
+  color: #fff;
 }
 
 .currency-panel {
@@ -82,13 +82,13 @@ function handleClick() {
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1rem;
-  background: #fff;
+  background: rgba(147,255,191,0.26);
   padding: 0.6rem 0.75rem;
   border-radius: 8px;
 }
 
 .currency-label {
-  color: #666;
+  color: #fff;
   font-weight: 600;
 }
 
@@ -103,9 +103,9 @@ function handleClick() {
   justify-content: center;
   width: 220px;
   height: 220px;
-  border: 3px solid #111;
+  border: 3px solid #fff;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f0f0f0 18%, #d9d9d9 100%);
+  background: rgba(255,255,255,0.02);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: transform 0.08s ease, box-shadow 0.08s ease;
@@ -125,14 +125,14 @@ function handleClick() {
   font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: 0.04em;
-  color: #111;
+  color: #fff;
 }
 
 .quote {
   margin-top: 1rem;
   text-align: center;
   font-style: italic;
-  color: #444;
+  color: #fff;
   min-height: 1.5em;
 }
 </style>

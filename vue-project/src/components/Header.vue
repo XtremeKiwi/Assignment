@@ -20,9 +20,9 @@ import { RouterLink } from 'vue-router'
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgba(147,255,191,0.26);
   border-radius: 16px;
-  background: #f9f9f9;
+  background: rgba(255,255,255,0.06);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
 }

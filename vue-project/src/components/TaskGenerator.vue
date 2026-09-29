@@ -107,10 +107,10 @@ function deleteQuest(questId) {
 .task-generator {
   width: 600px;
   padding: 1.25rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--border);
   border-radius: 16px;
-  background: #f9f9f9;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: transparent;
+  box-shadow: none;
   box-sizing: border-box;
 }
 
@@ -155,7 +155,7 @@ function deleteQuest(questId) {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  background: #fff;
+  background: rgba(255,255,255,0.06);
   border: 1px solid #e6e6e6;
   border-radius: 12px;
   padding: 0.85rem 0.9rem;
@@ -178,7 +178,7 @@ function deleteQuest(questId) {
 .quest-main p {
   margin: 0;
   font-size: 0.85rem;
-  color: #555;
+  color: #999;
   line-height: 1.4;
 }
 

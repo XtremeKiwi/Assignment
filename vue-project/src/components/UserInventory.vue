@@ -64,9 +64,9 @@ const inventory = computed(() => pickRandomItems(allItems, MAX_ITEMS))
 #userInventory {
   width: 600px;
   padding: 1.25rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgba(147,255,191,0.26);
   border-radius: 16px;
-  background: #f9f9f9;
+  background: rgba(255,255,255,0.06);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
 }
@@ -87,8 +87,8 @@ const inventory = computed(() => pickRandomItems(allItems, MAX_ITEMS))
   width: 100%;
   aspect-ratio: 1;
   border-radius: 12px;
-  border: 1px solid #d9d9d9;
-  background: linear-gradient(180deg, #ffffff 0%, #f3f3f3 100%);
+  border: 1px solid rgba(147,255,191,0.26);
+  background: rgba(255,255,255,0.02);
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.65);
   display: flex;
   align-items: center;
@@ -109,7 +109,7 @@ const inventory = computed(() => pickRandomItems(allItems, MAX_ITEMS))
   width: 42px;
   height: 42px;
   border-radius: 8px;
-  background: #ffffff; /* explicit white background */
+  background: orange; /* explicit white background */
   color: #000; /* ensure icons render black */
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
@@ -158,7 +158,7 @@ const inventory = computed(() => pickRandomItems(allItems, MAX_ITEMS))
 }
 .slot-tooltip strong {
   font-size: 0.9rem;
-  color: #ffd86b;
+  color: #fff;
 }
 
 .slot-tooltip span,

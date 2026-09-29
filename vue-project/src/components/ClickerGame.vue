@@ -72,10 +72,10 @@ function handleClick() {
   max-width: 1220px;
   margin: 1rem auto 0;
   padding: 1.25rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--border);
   border-radius: 16px;
-  background: #f9f9f9;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: transparent;
+  box-shadow: none;
   box-sizing: border-box;
 }
 
@@ -94,28 +94,14 @@ function handleClick() {
 
 .click-count {
   font-weight: 700;
-  color: #333;
+  color: var(--text);
 }
 
 .xp-panel {
   margin-bottom: 1rem;
 }
 
-.xp-bar {
-  position: relative;
-  width: 100%;
-  height: 14px;
-  background: linear-gradient(180deg, #ececec, #f6f6f6);
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  overflow: hidden;
-}
 
-.xp-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #ffd86b, #f0c14b);
-  transition: width 0.25s ease;
-}
 
 .xp-label {
   position: absolute;
@@ -123,7 +109,7 @@ function handleClick() {
   top: 50%;
   transform: translateY(-50%);
   font-size: 0.75rem;
-  color: #333;
+  color: var(--muted);
   font-weight: 600;
 }
 
@@ -133,18 +119,17 @@ function handleClick() {
   justify-content: center;
   width: 220px;
   height: 220px;
-  border: 3px solid #111;
+  border: 3px solid rgba(0,255,106,0.12);
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f0f0f0 18%, #d9d9d9 100%);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  background: rgba(255,255,255,0.02);
+  box-shadow: none;
   cursor: pointer;
-  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  transition: transform 0.08s ease;
   margin: 0 auto;
 }
 
 .click-target:hover {
   transform: scale(1.02);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
 }
 
 .click-target:active {
@@ -155,14 +140,14 @@ function handleClick() {
   font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: 0.04em;
-  color: #111;
+  color: var(--accent);
 }
 
 .quote {
   margin-top: 1rem;
   text-align: center;
   font-style: italic;
-  color: #444;
+  color: var(--muted);
   min-height: 1.5em;
 }
 </style>

@@ -41,9 +41,9 @@ function getFriendIcon(name) {
 #userFriends {
   width: 600px;
   padding: 1.25rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgba(147,255,191,0.26);
   border-radius: 16px;
-  background: #f9f9f9;
+  background: rgba(255,255,255,0.06);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
 }
@@ -68,8 +68,8 @@ function getFriendIcon(name) {
   gap: 0.8rem;
   padding: 0.7rem 0.8rem;
   border-radius: 12px;
-  background: #ffffff;
-  border: 1px solid #e6e6e6;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(147,255,191,0.26);
 }
 
 .avatar {
@@ -79,7 +79,7 @@ function getFriendIcon(name) {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #ffffff;
+  background: rgba(255,255,255,0.06);
   color: #000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
@@ -103,6 +103,6 @@ function getFriendIcon(name) {
 
 .friend-details span {
   font-size: 0.8rem;
-  color: #555;
+  color: #999;
 }
 </style>

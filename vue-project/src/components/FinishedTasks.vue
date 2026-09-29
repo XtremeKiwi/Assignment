@@ -33,9 +33,9 @@ const completedTasks = inject('completedTasks', [])
   max-height: 300px;
   overflow-y: auto;
   padding: 1.25rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgba(147,255,191,0.26);
   border-radius: 16px;
-  background: #f9f9f9;
+  background: rgba(147,255,191,0.26);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
 }
@@ -46,7 +46,7 @@ const completedTasks = inject('completedTasks', [])
 }
 
 .empty-state {
-  color: #666;
+  color: #999;
   font-style: italic;
 }
 
@@ -64,8 +64,8 @@ const completedTasks = inject('completedTasks', [])
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  background: #fff;
-  border: 1px solid #e5e5e5;
+  background: rgba(147,255,191,0.26);
+  border: 1px solid rgba(147,255,191,0.26);
   border-radius: 10px;
   padding: 0.75rem 0.9rem;
 }
@@ -78,6 +78,6 @@ const completedTasks = inject('completedTasks', [])
 
 .task-meta {
   font-weight: 700;
-  color: #0d6b7f;
+  color: #fff;
 }
 </style>

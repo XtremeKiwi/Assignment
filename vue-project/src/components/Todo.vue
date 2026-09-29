@@ -116,9 +116,9 @@ const deleteTodo = (id) => {
 .todo-container {
   width: 600px;
   padding: 1.25rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgba(147,255,191,0.26);
   border-radius: 16px;
-  background: #f9f9f9;
+  background: rgba(255,255,255,0.06);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
   margin: 0 auto;
@@ -133,9 +133,9 @@ const deleteTodo = (id) => {
 .add-task input {
   flex: 1;
   padding: 0.7rem 0.8rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgba(147,255,191,0.26);
   border-radius: 10px;
-  background: #fff;
+  background: rgba(147,255,191,0.26);
   font-size: 0.95rem;
 }
 
@@ -150,7 +150,7 @@ const deleteTodo = (id) => {
 .actions button {
   padding: 0.6rem 0.85rem;
   border-radius: 10px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgba(147,255,191,0.26);
   background: #fff;
   color: #222;
   cursor: pointer;
@@ -177,22 +177,22 @@ const deleteTodo = (id) => {
   align-items: center;
   gap: 0.8rem;
   padding: 0.8rem 0.9rem;
-  border: 1px solid #e6e6e6;
+  border: 1px solid rgba(147,255,191,0.26);
   border-radius: 12px;
-  background: #fff;
+  background: rgba(255,255,255,0.06);
 }
 
 .task-content {
   flex: 1;
   min-width: 0;
-  color: #333;
+  color: #999;
 }
 
 .task-content input {
   width: 100%;
   padding: 0.55rem 0.6rem;
   border-radius: 8px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid rgba(147,255,191,0.26);
   box-sizing: border-box;
 }
 
