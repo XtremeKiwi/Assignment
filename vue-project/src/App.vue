@@ -291,5 +291,5 @@ provide('completedTasks', completedTasks)
 </script>
 
 <template>
-  <RouterView />
+    <RouterView />
 </template>
