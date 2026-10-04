@@ -7,10 +7,7 @@ import { RouterLink } from 'vue-router'
     <RouterLink to="/" class="nav-link">Front Page</RouterLink>
     <RouterLink to="/operations" class="nav-link">Operations</RouterLink>
     <RouterLink to="/userstats" class="nav-link">UserStats</RouterLink>
-<<<<<<< HEAD
     <RouterLink to="/matrix" class="nav-link">The Matrix</RouterLink>
-=======
->>>>>>> c203b532d2d87f40fe32a09edd21f0c25af48a54
   </nav>
 </template>
 
@@ -23,15 +20,10 @@ import { RouterLink } from 'vue-router'
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
-<<<<<<< HEAD
+
   border: 1px solid rgba(147,255,191,0.26);
   border-radius: 16px;
   background: rgba(255,255,255,0.06);
-=======
-  border: 1px solid #d9d9d9;
-  border-radius: 16px;
-  background: #f9f9f9;
->>>>>>> c203b532d2d87f40fe32a09edd21f0c25af48a54
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
 }
